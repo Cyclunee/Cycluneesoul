@@ -71,17 +71,18 @@
                             <span className="text-xl font-black uppercase tracking-tighter text-white">CycluneeSoul</span>
                         </div>
                         
-                        <div className="hidden md:flex gap-8 items-center text-[10px] uppercase font-bold tracking-[0.2em] text-gray-400">
+                        <div className="hidden md:flex gap-4 items-center text-[10px] uppercase font-bold tracking-[0.2em] text-gray-400">
                             {navItems.map(item => (
                                 <button 
                                     key={item.id} 
                                     onClick={() => setActivePage(item.id)} 
-                                    className={`hover:text-yellow-400 transition-colors ${activePage === item.id ? 'text-yellow-400 border-b border-yellow-400 pb-1' : ''}`}
+                                    className={`hover:text-yellow-400 transition-colors mx-2 ${activePage === item.id ? 'text-yellow-400 border-b border-yellow-400 pb-1' : ''}`}
                                 >
                                     {item.label}
                                 </button>
                             ))}
-                            <a href="https://www.pinksale.finance/launchpad/polygon/0xEA5e2826BF36bC2153C8d034A2F0269a0e0561AD" target="_blank" className="bg-yellow-400 text-black px-6 py-2 rounded-xl font-black hover:bg-white transition-all shadow-xl">PRESALE $CYCL</a>
+                            <a href="https://www.dexview.com/polygon/0x63F38bed748EC6A75fb4a8E87895b207bfbDbd98" target="_blank" className="border border-white/20 text-white px-4 py-2 rounded-xl font-black hover:border-yellow-400 transition-all">DEX VIEW</a>
+                            <a href="https://www.pinksale.finance/launchpad/polygon/0xEA5e2826BF36bC2153C8d034A2F0269a0e0561AD" target="_blank" className="bg-yellow-400 text-black px-4 py-2 rounded-xl font-black hover:bg-white transition-all shadow-xl">PRESALE COMING SOON</a>
                         </div>
 
                         <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
@@ -96,6 +97,10 @@
                                     {item.label}
                                 </button>
                             ))}
+                            <div className="flex flex-col gap-2 pt-4">
+                                <a href="https://www.dexview.com/polygon/0x63F38bed748EC6A75fb4a8E87895b207bfbDbd98" target="_blank" className="text-center border border-white/20 text-white py-3 rounded-xl font-black uppercase">DEX VIEW</a>
+                                <a href="https://www.pinksale.finance/launchpad/polygon/0xEA5e2826BF36bC2153C8d034A2F0269a0e0561AD" target="_blank" className="text-center bg-yellow-400 text-black py-3 rounded-xl font-black uppercase">PRESALE COMING SOON</a>
+                            </div>
                         </div>
                     )}
                 </nav>
@@ -131,8 +136,8 @@
                         {[
                             { l: 'Network', v: 'Polygon' },
                             { l: 'Supply', v: '1 Trillion' },
-                            { l: 'Tax', v: '6% Total' },
-                            { l: 'Status', v: 'Token Launch' }
+                            { l: 'Tax', v: '5% Total' },
+                            { l: 'Status', v: 'Phase 1' }
                         ].map((s, i) => (
                             <div key={i} className="bg-white/5 border border-white/10 p-4 rounded-2xl">
                                 <p className="text-[10px] text-gray-500 font-black uppercase tracking-widest">{s.l}</p>
@@ -146,9 +151,9 @@
 
         const Tokenomics = () => {
             const taxes = [
-                { l: 'Reflections', v: '1%', desc: 'Earn passive income just by holding.' },
-                { l: 'Liquidity', v: '3%', desc: 'Auto-liquidity for price stability.' },
-                { l: 'Marketing', v: '2%', desc: 'To power the silent expansion.' }
+                { l: 'Reflections', v: '2%', desc: 'Earn passive income just by holding.' },
+                { l: 'Liquidity', v: '2%', desc: 'Auto-liquidity for price stability.' },
+                { l: 'Marketing', v: '1%', desc: 'To power the silent expansion.' }
             ];
             const allocation = [
                 { l: 'Liquidity Pool', p: '50%', c: 'bg-yellow-400' },
@@ -201,7 +206,7 @@
                         <div className="flex justify-between items-start mb-12">
                             <div>
                                 <h2 className="text-5xl font-black uppercase tracking-tighter">Whitepaper</h2>
-                                <p className="font-bold text-gray-400 uppercase tracking-widest">Version 1.0 Official</p>
+                                <p className="font-bold text-gray-400 uppercase tracking-widest">Version 2.0 Official</p>
                             </div>
                             <div className="bg-black text-white p-4 rounded-xl">
                                 <Icon name="shield" size={32} />
@@ -213,24 +218,50 @@
                                 <h3 className="text-2xl font-black mb-4">01. Our Philosophy</h3>
                                 <p>CycluneeSoul ($CYCL) is a community-centric ecosystem built on the Polygon PoS network. It is designed to redefine the memecoin landscape by prioritizing extreme transparency, long-term security, and a sustainable reward structure for all participants. Our mission is to foster "The Silent Revolution," where value is grown through trust and innovative utility.</p>
                             </section>
+
                             <section>
                                 <h3 className="text-2xl font-black mb-4">02. Safety Mechanism</h3>
-                                <p>Extreme Security: To eliminate "rug-pull" concerns, 70% of the total supply is dedicated to the Liquidity Pool and is Locked for 5 Years (1,825 days) via PinkSale.
-
-Passive Holder Rewards: The protocol incentivizes holding through an automated reflection mechanism.</p>
+                                <p>Extreme Security: To eliminate "rug-pull" concerns, 70% of the total supply is dedicated to the Liquidity Pool and is Locked for 5 Years (1,825 days) via PinkSale. Passive Holder Rewards: The protocol incentivizes holding through an automated reflection mechanism.</p>
                             </section>
+
                             <section>
-                                <h3 className="text-2xl font-black mb-4 text-red-600">03. Legal & Disclaimer</h3>
+                                <h3 className="text-2xl font-black mb-4">03. Legal & Disclaimer</h3>
                                 <div className="space-y-6 text-xs bg-gray-50 p-6 rounded-xl border border-gray-200">
-                                    <p><strong className="text-black">1. NO OFFER IN RESTRICTED JURISDICTIONS:</strong> The $CYCL token presale is NOT being offered, and is strictly prohibited, to any person or entity who is a resident, citizen, or located within the Kingdom of Thailand, the United States of America, or the People’s Republic of China. Participation from these jurisdictions is restricted.</p>
-                                    <p><strong className="text-black">2. UTILITY TOKEN DEFINITION:</strong> $CYCL is a Utility-Meme Token designed for the CycluneeSoul ecosystem. It is not intended to be a "Security," "Investment Contract," or "Financial Instrument" under any jurisdiction's securities laws. Holding $CYCL does not grant rights to dividends or equity.</p>
-                                    <p><strong className="text-black">3. NATURE OF MEME TOKENS & RISKS:</strong> As part of the meme category, $CYCL is subject to extreme market volatility. Value is driven by community sentiment and adoption. Participants should only contribute funds they are prepared to lose.</p>
-                                    <p><strong className="text-black">4. COMPLIANCE WITH LOCAL LAWS:</strong> It is the sole responsibility of the participant to ensure compliance with the laws of their respective country.</p>
+                                    <p><strong className="text-black">1. NO OFFER IN RESTRICTED JURISDICTIONS:</strong> The $CYCL token presale is NOT being offered, and is strictly prohibited, to any person or entity who is a resident, citizen, or located within the Kingdom of Thailand, the United States of America, or the People’s Republic of China.</p>
+                                    <p><strong className="text-black">2. UTILITY TOKEN DEFINITION:</strong> $CYCL is a Utility-Meme Token designed for the CycluneeSoul ecosystem. It is not intended to be a "Security" under any jurisdiction's securities laws.</p>
+                                    <p><strong className="text-black">3. NATURE OF MEME TOKENS:</strong> As part of the meme category, $CYCL is subject to extreme market volatility. Value is driven by community sentiment.</p>
+                                    <p><strong className="text-black">4. COMPLIANCE:</strong> It is the sole responsibility of the participant to ensure compliance with the laws of their country.</p>
                                 </div>
                             </section>
+
                             <section>
                                 <h3 className="text-2xl font-black mb-4">04. Future Utility</h3>
-                                <p>$CYCL is more than just a meme; it serves as the gateway to the "Silent Ecosystem." Future developments include anonymous voting platforms and an exclusive NFT Collection focused on "Shadow Arts" and minimalist digital aesthetics.</p>
+                                <p>$CYCL serves as the gateway to the "Silent Ecosystem." Future developments include anonymous voting platforms and an exclusive NFT Collection focused on "Shadow Arts" and minimalist digital aesthetics.</p>
+                            </section>
+
+                            <section className="bg-black text-white p-8 rounded-3xl">
+                                <h3 className="text-2xl font-black mb-4 text-yellow-400">05. Strategic Tax Roadmap (CEX Evolution)</h3>
+                                <p className="mb-4">To ensure a balanced growth trajectory, we have implemented a dynamic tax structure designed to protect early holders while preparing for global exchange integration:</p>
+                                <div className="space-y-4 text-sm border-l-2 border-yellow-400 pl-4">
+                                    <p><strong>Launch Phase Tax (DEX Environment):</strong> A 5% Transaction Tax is applied (2% Reflections, 2% Auto-Liquidity, 1% Marketing & Development).</p>
+                                    <p><strong>The Transition to 0% Tax:</strong> Upon the official announcement of $CYCL listing on a Centralized Exchange (CEX), the project owner will utilize smart contract functions to permanently reduce all transaction taxes to 0%.</p>
+                                    <p><strong>CEX Integration:</strong> Specific exchange wallets will be excluded from fee mechanisms to ensure seamless operations.</p>
+                                </div>
+                            </section>
+
+                            <section>
+                                <h3 className="text-2xl font-black mb-4">06. Community Commitment</h3>
+                                <p>By outlining this transition in advance, CYCL reinforces its philosophy of Extreme Transparency. Investors can participate with the confidence that the project has a clear technical roadmap to evolve from a reward-based meme token into a globally traded utility asset.</p>
+                            </section>
+
+                            <section className="bg-gray-100 p-8 rounded-3xl border-2 border-black">
+                                <h3 className="text-2xl font-black mb-4">07. Ownership Renouncement Roadmap</h3>
+                                <p className="mb-4">The CYCL governance will follow a two-step renouncement process to ensure absolute decentralization:</p>
+                                <div className="space-y-4">
+                                    <p><strong>Phase 1: Pre-Audit Renouncement</strong> – Prior to security audits, the project owner will finalize all essential contract parameters to minimize centralized intervention risks.</p>
+                                    <p><strong>Phase 2: Pre-CEX Listing Finalization</strong> – Immediately before our first CEX listing, and after taxes are set to 0%, the ownership of the $CYCL smart contract will be <strong>Renounced</strong>.</p>
+                                    <p className="italic text-sm text-gray-500 underline">Result: No one (including developers) will have the technical ability to modify the contract, change taxes, or alter supply. $CYCL remains community-owned forever.</p>
+                                </div>
                             </section>
                         </div>
                     </div>
@@ -240,25 +271,63 @@ Passive Holder Rewards: The protocol incentivizes holding through an automated r
 
         const Roadmap = () => {
             const steps = [
-                { s: 'Phase 1', t: 'Vision', i: ['Token Launch', 'Website Release', 'Community Airdrop'] },
-                { s: 'Phase 2', t: 'Manifestation', i: ['PinkSale Fair Launch', 'Liquidity Lock', 'Initial 10% Burn'] },
-                { s: 'Phase 3', t: 'Observation', i: ['CMC/CG Listings', 'CEX Applications', 'Strategic Growth'] },
-                { s: 'Phase 4', t: 'Transcendence', i: ['NFT Collection', 'DAO Governance', 'Ecosystem Expansion'] }
+                { 
+                    s: 'Phase 1', 
+                    t: 'Vision & Foundation', 
+                    i: [
+                        'Token Genesis: Deployment of the $CYCL Smart Contract on Polygon PoS.', 
+                        'Website Release: Launch of the official portal with updated Whitepaper 2.0.', 
+                        'Community Airdrop: Rewards for early "Silent Revolution" supporters.',
+                        'Pre-Audit Preparation: Finalizing contract logic for security audit.'
+                    ] 
+                },
+                { 
+                    s: 'Phase 2', 
+                    t: 'Manifestation & Presale', 
+                    i: [
+                        'PinkSale Standard Presale: Launching with a Lower Soft Cap & Fixed Price.', 
+                        '70% Liquidity Lock: Automatic lock for 5 Years via PinkSale.', 
+                        'Initial 10% Burn: Immediate supply reduction post-launch.',
+                        'Pre-Audit Renouncement: Initial step in decentralization process.'
+                    ] 
+                },
+                { 
+                    s: 'Phase 3', 
+                    t: 'Observation & Integration', 
+                    i: [
+                        'CMC & CoinGecko Listings: Applying for major tracking platforms.', 
+                        'Strategic Growth: Aggressive marketing within the Polygon ecosystem.', 
+                        'CEX Applications: Official outreach to global exchanges.',
+                        'The Zero-Tax Pivot: 0% Tax adjustment & Final Ownership Renouncement upon CEX listing.'
+                    ] 
+                },
+                { 
+                    s: 'Phase 4', 
+                    t: 'Transcendence & Ecosystem', 
+                    i: [
+                        '"Shadow Arts" NFT Collection: Gateway to the Silent Ecosystem.', 
+                        'DAO Governance: Anonymous voting platforms for community decisions.', 
+                        'Ecosystem Expansion: Development of minimalist digital utilities.'
+                    ] 
+                }
             ];
 
             return (
                 <section className="py-32 px-6 bg-gray-950">
                     <div className="max-w-5xl mx-auto">
-                        <h2 className="text-5xl md:text-8xl font-black text-white mb-24 text-center uppercase tracking-tighter">Roadmap</h2>
+                        <div className="text-center mb-24">
+                            <h2 className="text-5xl md:text-8xl font-black text-white uppercase tracking-tighter mb-4">Strategic Roadmap</h2>
+                            <p className="text-yellow-400 font-bold tracking-[0.3em] text-sm uppercase">Updated 2026 Edition</p>
+                        </div>
                         <div className="grid md:grid-cols-2 gap-8">
                             {steps.map((step, idx) => (
-                                <div key={idx} className="bg-black/40 p-10 rounded-[3rem] border border-white/5 relative group hover:border-yellow-400/50 transition-all">
+                                <div key={idx} className="bg-black/40 p-10 rounded-[3rem] border border-white/5 relative group hover:border-yellow-400/50 transition-all flex flex-col h-full">
                                     <div className="absolute top-6 right-8 text-2xl font-black text-yellow-400 opacity-20">{step.s}</div>
-                                    <h3 className="text-3xl font-black text-white uppercase mb-6">{step.t}</h3>
-                                    <ul className="space-y-3">
+                                    <h3 className="text-3xl font-black text-white uppercase mb-6 pr-12 leading-none">{step.t}</h3>
+                                    <ul className="space-y-4 flex-grow">
                                         {step.i.map((li, liIdx) => (
-                                            <li key={liIdx} className="flex items-center gap-3 text-gray-500 font-bold uppercase text-xs">
-                                                <div className="w-1.5 h-1.5 bg-yellow-400 rounded-full"></div>
+                                            <li key={liIdx} className="flex items-start gap-3 text-gray-500 font-bold uppercase text-[10px] leading-relaxed">
+                                                <div className="w-1.5 h-1.5 bg-yellow-400 rounded-full mt-1 flex-shrink-0"></div>
                                                 {li}
                                             </li>
                                         ))}
@@ -273,7 +342,7 @@ Passive Holder Rewards: The protocol incentivizes holding through an automated r
 
         const Footer = () => {
             const [copied, setCopied] = useState(false);
-            const ca = "0x0000000000000000000000000000000000000000";
+            const ca = "0x63F38bed748EC6A75fb4a8E87895b207bfbDbd98";
 
             const copyAddr = () => {
                 const el = document.createElement('textarea');
@@ -307,15 +376,15 @@ Passive Holder Rewards: The protocol incentivizes holding through an automated r
                                 <Icon name="alert-triangle" size={14} /> Legal Disclaimer & Terms
                             </h4>
                             <div className="text-[10px] text-gray-500 font-bold uppercase space-y-3 leading-relaxed">
-                                <p>1. The $CYCL token presale is NOT offered to residents of Thailand, USA, or China. Participation constitutes a warranty that you are not in these jurisdictions.</p>
-                                <p>2. $CYCL is a Utility-Meme Token, not a "Security" or financial instrument under any law.</p>
+                                <p>1. The $CYCL token presale is NOT offered to residents of Thailand, USA, or China.</p>
+                                <p>2. $CYCL is a Utility-Meme Token, not a "Security" or financial instrument.</p>
                                 <p>3. High market volatility applies. Only contribute what you can afford to lose.</p>
                                 <p>4. Compliance with local jurisdiction laws is the participant's responsibility.</p>
                             </div>
                         </div>
 
                         <div className="flex justify-center gap-10 mb-12">
-                            <a href="#" className="text-gray-400 hover:text-white transition-colors"><Icon name="twitter" size={28} /></a>
+                            <a href="https://x.com/cyclunee" target="_blank" className="text-gray-400 hover:text-white transition-colors"><Icon name="twitter" size={28} /></a>
                             <a href="#" className="text-gray-400 hover:text-white transition-colors"><Icon name="send" size={28} /></a>
                             <a href="#" className="text-gray-400 hover:text-white transition-colors"><Icon name="github" size={28} /></a>
                         </div>
@@ -352,6 +421,4 @@ Passive Holder Rewards: The protocol incentivizes holding through an automated r
         root.render(<App />);
     </script>
 </body>
-
 </html>
-
